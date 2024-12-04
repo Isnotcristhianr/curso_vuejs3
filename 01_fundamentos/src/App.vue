@@ -1,53 +1,69 @@
-<script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import TheWelcome from "./components/TheWelcome.vue";
+<script>
+export default {
+  data() {
+    return {
+      contador: 10
+    }
+  },
+  methods: {
+    incrementar() {
+      this.contador++;
+    },
+    decrementar() {
+      this.contador--;
+    },
+    reset() {
+      this.contador = 0;
+    }
+  }
+}
 </script>
 
 <template>
-    <header>
-      <img
-        alt="Vue logo"
-        class="logo"
-        src="./assets/logo.svg"
-        width="125"
-        height="125"
-      />
-
-      <div class="wrapper">
-        <HelloWorld msg="You did it!" />
-      </div>
-    </header>
-
-    <main>
-      <TheWelcome />
-    </main>
+  <div class="container">
+    <img src="../src/assets/logo.svg" alt="Vue logo" width="125">
+    <small>
+      <h1>Contador en Vue Js 3</h1>
+      <p> Desarrollado por: <a href="https://github.com/Isnotcristhianr" target="_blank">Isnotcristhianr</a></p>
+    </small>
+    <hr>
+    <h2>Contador: {{ contador }}</h2>
+    <button @click="incrementar()"> +1</button>
+    <button @click="decrementar()"> -1</button>
+    <button @click="reset()"> Reset</button>
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+  .container {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  h1{
+    font-weight: bolder;
+    color: #2c3e50;
+    font-size: 2.5rem;
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+  small {
+    font-size: 1.5rem;
+    color: #2c3e50;
   }
-}
+
+  a {
+    text-decoration: none;
+    color: #42b983;
+  }
+
+  button {
+    cursor: pointer; 
+    font-size: 1.2rem;
+    padding: 5px 5px;
+    margin: 0 8px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #42b983;
+  }
 </style>
