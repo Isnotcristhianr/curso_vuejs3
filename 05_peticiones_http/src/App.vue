@@ -11,8 +11,8 @@ const cambiarVista = (vista) => {
 </script>
 
 <template>
-  <div>
-    <h1>Peticiones HTTP</h1>
+  <div class="container">
+    <h1 class="text-center">Peticiones HTTP</h1>
     <hr />
     <div class="d-flex justify-content-center">
       <button
