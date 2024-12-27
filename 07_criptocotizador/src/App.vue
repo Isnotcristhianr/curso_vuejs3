@@ -1,10 +1,20 @@
-<script setup>
+<script>
+import Card from './components/Card.vue';
+
+export default {
+  components: {
+    Card,
+  }
+}
 </script>
 
 <template>
-  <div>
-    <h1 class="text-center text-3xl font-bold underline">Hola mundo</h1>
-  </div>
+    <div class="flex justify-center items-center h-screen">
+        <div class="w-full max-w-md">
+            <Card 
+            />
+        </div>
+    </div>
 </template>
 
 <style scoped>
