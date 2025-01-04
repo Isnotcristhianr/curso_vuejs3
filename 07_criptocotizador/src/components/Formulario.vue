@@ -7,8 +7,8 @@ export default {
         }
     },
     methods: {
-        cotizar(cripto, moneda) {
-            console.log(cripto, moneda);
+        handleSubmit() {
+            this.$emit('cotizar', this.cripto, this.moneda);
         }
     }
 }
@@ -16,7 +16,7 @@ export default {
 
 <template>
     <div class="mt-8 max-w-md mx-auto">
-        <form action="" class="bg-gray-50 border border-gray-100 rounded-lg p-6" @submit.prevent="cotizar(cripto, moneda)">
+        <form action="" class="bg-gray-50 border border-gray-100 rounded-lg p-6" @submit.prevent="handleSubmit">
             <div class="space-y-6">
                 <div>
                     <label class="text-gray-600 text-sm mb-2 block" for="moneda">
@@ -47,6 +47,13 @@ export default {
                         <option value="BTC">Bitcoin</option>
                         <option value="ETH">Ethereum</option>
                         <option value="LTC">Litecoin</option>
+                        <option value="XRP">XRP</option>
+                        <option value="ADA">Cardano</option>
+                        <option value="SOL">Solana</option>
+                        <option value="DOGE">Dogecoin</option>
+                        <option value="SHIB">Shiba Inu</option>
+                        <option value="DOT">Polkadot</option>
+                        <option value="XLM">Stellar</option>
                     </select>
                 </div>
 
