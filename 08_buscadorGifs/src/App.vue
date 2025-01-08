@@ -1,19 +1,17 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-//vistas
+//componentes
+import NavBar from '@/components/NavBar.vue'
+import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
   <div>
-    <h1 class="text-3xl font-bold underline ">Buscador de Gifs</h1>
+    <NavBar />
 
-    <nav class="flex justify-center gap-4">
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/buscador">Buscador</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-    </nav>
+    <RouterView class="min-h-screen"/>
 
-    <RouterView />
+      <Footer />
   </div>
 </template>
 
