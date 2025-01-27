@@ -1,15 +1,14 @@
+<script setup lang="ts">
+import { useProductStore } from '../stores/product.store'
+
+const {products, addProduct} = useProductStore()
+console.log(products)
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <h1>About</h1>
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+
