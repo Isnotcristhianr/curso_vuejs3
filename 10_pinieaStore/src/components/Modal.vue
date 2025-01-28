@@ -8,15 +8,15 @@ const {closeModal} = useModalStore()
 
 <template>
     <div>
-        <Teleport to="body">
-            <div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+    <Teleport to="body">
+        <div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
                 <div class="bg-white p-4 rounded-md">
-                    <slot class="content">
+                    <slot >
                         <CardContent />
                     </slot>
-                    <button @click="closeModal">Cerrar</button>
-                </div>
+                    <button @click="closeModal">❌</button>
             </div>
-        </Teleport>
+        </div>
+    </Teleport>
     </div>
 </template>

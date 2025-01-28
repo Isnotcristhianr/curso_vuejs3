@@ -51,6 +51,12 @@ export const useProductStore = defineStore('product', () => {
                 img: 'https://previews.123rf.com/images/dasha122007/dasha1220071712/dasha122007171200028/92043133-dise%C3%B1o-de-plantilla-de-anuncios-de-productos-de-belleza-realista.jpg',
                 name: 'Shampoo',
                 price: 15
+            },
+            {
+                id: 6,
+                img: 'https://www.arlecoproducciones.com/wp-content/uploads/2023/07/publicidad-de-productos-de-limpieza-e1690474688933.webp',
+                name: 'Desodorante',
+                price: 8
             }
         ],
         selected: [],
