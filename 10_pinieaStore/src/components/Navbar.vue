@@ -12,11 +12,11 @@ const products = useProductStore()
 
         <div class="navbar bg-base-100">
             <div class="flex-1">
-                <a class="btn btn-ghost text-xl">Pinia Store</a>
+                <a href="/" class="btn btn-ghost text-xl">Pinia Store</a>
             </div>
             <div class="flex-none">
                 <ul class="menu menu-horizontal px-1">
-                    <li><a>Articulos</a></li>
+                    <li><a href="/about">Articulos</a></li>
                     <li><a @click="openModal">
                         <span class="badge badge-primary">{{ products.products.quantity() }}</span>
                         🛒

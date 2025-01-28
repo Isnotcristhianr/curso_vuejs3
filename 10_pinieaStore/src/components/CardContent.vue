@@ -54,11 +54,18 @@ defineOptions({
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <button 
+                                @click="products.addProduct(product)"
+                                class="text-blue-600 hover:text-blue-800 transition-colors p-2 rounded-full hover:bg-red-50"
+                                title="Eliminar producto"
+                            >
+                                ✚
+                            </button>
+                            <button 
                                 @click="products.removeProduct(product)"
                                 class="text-red-600 hover:text-red-800 transition-colors p-2 rounded-full hover:bg-red-50"
                                 title="Eliminar producto"
                             >
-                                🗑️
+                                ➖
                             </button>
                         </td>
                     </tr>

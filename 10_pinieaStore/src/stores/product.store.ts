@@ -84,11 +84,15 @@ export const useProductStore = defineStore('product', () => {
         const productExist = products.selected.find(
             (selectedProduct) => selectedProduct.name === product.name
         )
+        if (productExist) {
+            productExist.quantity--
+        }
     }
+
 
     return {
         products,
         addProduct,
-        removeProduct
+        removeProduct,
     }
 })
