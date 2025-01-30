@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { Teleport } from 'vue';
 import { useModalStore } from '../stores/modal.store';
-import CardContent from './CardContent.vue';
 
 defineOptions({
     name: 'Modal'
