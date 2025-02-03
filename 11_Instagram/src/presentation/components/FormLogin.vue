@@ -7,9 +7,9 @@ defineOptions({
 </script>
 
 <template>
-    <div class="flex justify-center items-center min-h-screen bg-gray-50">
-        <div class="card w-96 bg-base-100 shadow-xl p-8">
-            <h1 class="text-4xl font-bold text-center mb-8" >ℐ𝓃𝓈𝓉𝒶𝑔𝓇𝒶𝓂</h1>
+    <div class="flex justify-center items-center min-h-screen ">
+        <div class="card w-96 bg-base-100 shadow-xl p-8 rounded-lg">
+            <h1 class="text-4xl font-bold text-center mb-8" >𝑰𝒏𝒔𝒕𝒂𝒈𝒓𝒂𝒎</h1>
             <form class="space-y-4">
                 <input 
                     type="text" 
