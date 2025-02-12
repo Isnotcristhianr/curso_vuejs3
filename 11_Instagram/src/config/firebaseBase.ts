@@ -8,13 +8,13 @@ import { getFirestore } from 'firebase/firestore'
 import { getStorage } from 'firebase/storage'
 
 const firebaseConfig = {
-  apiKey: '',
-  authDomain: '',
-  projectId: '',
-  storageBucket: '',
-  messagingSenderId: '',
-  appId: '',
-}
+  apiKey: "AIzaSyBD88KCWHhVFg3BWrRX5M38clppuzBmFUM",
+  authDomain: "instafire-2402e.firebaseapp.com",
+  projectId: "instafire-2402e",
+  storageBucket: "instafire-2402e.firebasestorage.app",
+  messagingSenderId: "688047316378",
+  appId: "1:688047316378:web:e29f0f4b0447cb91122e23"
+};
 
 //initialize firebase
 export const FirebaseApp = initializeApp(firebaseConfig)
