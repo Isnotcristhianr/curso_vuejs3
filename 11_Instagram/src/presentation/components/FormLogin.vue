@@ -22,14 +22,15 @@ const Login = async () => {
 
 //? login google
 const LoginGoogleAction = async () => {
-  const user = await LoginGoogle()
-  console.log(user)
-
-  if (user) {
-    router.replace('/')
-  }
-
-  return router.replace('/Login')
+    try {
+        const user = await LoginGoogle()
+        console.log(user)
+        if(user){
+            router.replace('/')
+        }
+    } catch (error) {
+        console.error('Error de login:', error)
+    }
 }
 
 //reset
