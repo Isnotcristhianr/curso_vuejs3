@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import NavBar from '../layout/NavBar.vue'
 
 defineOptions({
     name: 'about-view'
@@ -7,8 +8,8 @@ defineOptions({
 </script>
 
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <NavBar />
   </div>
 </template>
 
