@@ -4,14 +4,20 @@ import { RouterView, useRouter } from 'vue-router'
 import { onMounted } from 'vue'
 //current user
 import { getCurrentUser } from 'vuefire'
+//stores
+import { useUserStore } from './presentation/stores/user.store'
 
 const router = useRouter()
+const userStore = useUserStore()
 
 onMounted(async () => {
   const currentUser = await getCurrentUser();
   if(currentUser){
+    await userStore.setUser(currentUser)
+
     router.push('/')
   }else{
+    userStore.clearUser()
     router.push('/login')
   }
 })

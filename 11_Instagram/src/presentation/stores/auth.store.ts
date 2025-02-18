@@ -8,6 +8,8 @@ import { LogoutUseCases } from "@/domain/use-cases/auth/logout.use_cases";
 import { RegisterUseCases } from "@/domain/use-cases/auth/register.uses_cases";
 //helpers
 import { verifyPassword } from "@/helpers/verifyPassword";
+//stores
+import { useUserStore } from "./user.store";
 
 const AuthFormInitialState = {
     email: '',
@@ -18,6 +20,7 @@ const AuthFormInitialState = {
 export const useAuthStore = defineStore('auth', () => {
     //state
     const authForm = reactive(AuthFormInitialState)
+    const userStore = useUserStore()
 
    //reset 
    const resetAuthForm = () => {
@@ -34,6 +37,7 @@ export const useAuthStore = defineStore('auth', () => {
         if(!user){
             throw new Error('User not found')
         }
+        await userStore.setUser(user.user)
         return user
 
     }catch(error){
@@ -50,6 +54,7 @@ export const useAuthStore = defineStore('auth', () => {
         if(!user){
             throw new Error('User not found')
         }
+        await userStore.setUser(user.user)
         return user
     }catch(error){
         console.log(error)
@@ -61,6 +66,7 @@ export const useAuthStore = defineStore('auth', () => {
    const Logout = async () => {
     try{
         await LogoutUseCases.execute()
+        userStore.clearUser()
     }catch(error){
         console.log(error)
     }
@@ -79,6 +85,7 @@ export const useAuthStore = defineStore('auth', () => {
         if(!user){
             throw new Error('User not found')
         }
+        await userStore.setUser(user.user)
         return user
         
     }catch(error){
