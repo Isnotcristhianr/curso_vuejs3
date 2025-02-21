@@ -89,6 +89,7 @@ export const useAuthStore = defineStore('auth', () => {
         return user
         
     }catch(error){
+        alert("Error al registrar el usuario: " + error)
         console.log(error)
         resetAuthForm()
     }

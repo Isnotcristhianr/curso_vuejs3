@@ -33,6 +33,7 @@ const LoginGoogleAction = async () => {
     }
 }
 
+
 //reset
 onMounted(() => {
   resetAuthForm()
@@ -83,7 +84,7 @@ defineOptions({
       <div class="mt-8 text-center text-sm">
         <p class="text-gray-600">
           Don't have an account?
-          <a href="#" class="text-blue-500 font-semibold hover:underline">Sign up</a>
+          <router-link to="/register" class="text-blue-500 font-semibold hover:underline">Sign up</router-link>
         </p>
       </div>
     </div>
