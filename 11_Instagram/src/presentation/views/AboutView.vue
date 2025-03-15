@@ -267,6 +267,42 @@ const formatDate = (date: Date | Timestamp | DateTime | string) => {
           </div>
         </div>
       </div>
+
+      <!-- separador -->
+       <div class="flex items-center my-8">
+         <div class="flex-grow h-px bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+         <span class="px-4 text-gray-500 dark:text-gray-400">Publicaciones</span>
+        <div class="flex-grow h-px bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+       </div>
+
+       <!-- lista de posts -->
+        <div v-if="posts.length > 0" class="space-y-8">
+          <div 
+          v-for="post in posts"
+          :key="post.id"
+          class="bg-white dark:bg-base-100 rounded-lg shadow-md p-4"
+          >
+          <!-- cabecera -->
+           <div class="p-4 flex items-center border-b dark:border-gray-700" >
+            <div class="w-10 h-10 rounded-full bg-gradient-to-r from-primary flex items-center mr-3">
+              <span class="text-white font-bold">{{  post.uid.charAt(0).toUpperCase }}</span>
+            </div>
+            <p class="font-semibold dark:text-white"> Usuario </p>
+            <p class="text-xs text-gray-500 dark:text-gray-200">
+              {{ formatDate(post.createdAt) }}
+            </p>
+           </div>
+        </div>
+        </div>
+        <div v-else class="text-center text-gray-500 dark:text-gray-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-16 w-16 text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+          <h3 class="text-lg font-medium">No hay publicaciones</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            Sé el primero en publicar
+          </p>
+        </div>
     </div>
   </div>
 </template>
