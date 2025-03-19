@@ -7,7 +7,6 @@ import { PostService } from '@/services/postService'
 import { PostModel } from '@/database/posts/post.model'
 import { UploadService } from '@/services/uploadService'
 import type { Timestamp } from 'firebase/firestore'
-import type { DateTime } from 'luxon'
 
 defineOptions({
   name: 'about-view',
@@ -143,7 +142,7 @@ const createPost = async () => {
 }
 
 //Formato fecha
-const formatDate = (date: Date | Timestamp | DateTime | string) => {
+const formatDate = (date: Date | Timestamp  | string) => {
   if (date instanceof Date) {
     return date.toLocaleDateString()
   }
@@ -152,21 +151,7 @@ const formatDate = (date: Date | Timestamp | DateTime | string) => {
   if (date && typeof date === 'object' && 'toDate' in date) {
     return date.toDate().toLocaleDateString()
 
-    //luxon
-    if (date && typeof date === 'object' && 'toIso' in date) {
-      //convertir datetime a string iso y luego date
-      const isoDate = date.toIso()
-      if (isoDate) {
-        return new Date(isoDate).toLocaleDateString()
-      }
-
-      if ('toJSDate' in date && typeof date.toJSDate === 'function') {
-        return date.toJSDate().toLocaleDateString()
-      }
-
-      //default
-      return date.toString()
-    }
+ 
   }
 }
 </script>

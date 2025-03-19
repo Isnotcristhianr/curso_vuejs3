@@ -5,7 +5,7 @@ import type { UserCredential } from "firebase/auth";
 export class LoginEmailandPasswordUseCases {
     constructor(private readonly authService: AuthService){}
 
-   static execute(email: string, password: string): Promise<UserCredential> {
+   static execute(email: string, password: string): Promise<UserCredential | undefined>  {
     return new AuthService(new AuthModel()).signInEmailPassword(email, password)
    }
 }
