@@ -8,7 +8,7 @@ import router from './presentation/router'
 
 //firebase
 import { VueFire, VueFireAuth } from 'vuefire'
-import { FirebaseApp } from './config/firebaseConfig'
+import { FirebaseApp } from '../src/config/firebaseConfig'
 
 const app = createApp(App)
 
