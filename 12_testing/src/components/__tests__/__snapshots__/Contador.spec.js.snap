@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Contador Pruebas > Debe renderizar el componente correctamente 1`] = `
+"<div>
+  <h2>Contador: 0</h2><button id="increment">Incrementar</button><button id="decrement">Decrementar</button><button id="reset">Reiniciar</button>
+</div>"
+`;
