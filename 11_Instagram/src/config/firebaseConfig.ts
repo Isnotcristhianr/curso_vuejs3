@@ -1,17 +1,33 @@
 import { initializeApp } from 'firebase/app'
+//auth
+import { getAuth } from 'firebase/auth'
+import { GoogleAuthProvider } from 'firebase/auth'
+//firestore
 import { getFirestore } from 'firebase/firestore'
+//storage
 import { getStorage } from 'firebase/storage'
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID
-}
+  apiKey: "AIzaSyBD88KCWHhVFg3BWrRX5M38clppuzBmFUM",
+  authDomain: "instafire-2402e.firebaseapp.com",
+  projectId: "instafire-2402e",
+  storageBucket: "instafire-2402e.firebasestorage.app",
+  messagingSenderId: "688047316378",
+  appId: "1:688047316378:web:e29f0f4b0447cb91122e23"
+};
 
-// Initialize Firebase
+//initialize firebase
 export const FirebaseApp = initializeApp(firebaseConfig)
-export const firestore = getFirestore(FirebaseApp)
+export const auth = getAuth(FirebaseApp)
+
+//providers
+export const googleProvider = new GoogleAuthProvider()
+
+//storage
 export const storage = getStorage(FirebaseApp)
+
+//firestore
+export const firestore = getFirestore(FirebaseApp)
+
+// here we can export reusable database references
+export const storageRef = getStorage(FirebaseApp)

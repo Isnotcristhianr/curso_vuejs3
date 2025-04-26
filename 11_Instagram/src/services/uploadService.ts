@@ -1,5 +1,5 @@
 import { ref, uploadBytes, getDownloadURL } from '@firebase/storage'
-import { storage } from '../config/firebaseBase'
+import { storage } from '../config/firebaseConfig'
 import { v4 as uuidv4 } from 'uuid'
 
 export class UploadService {

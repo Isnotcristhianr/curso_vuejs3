@@ -1,6 +1,6 @@
 import type { User } from 'firebase/auth'
 import { collection, doc, setDoc, getDoc } from 'firebase/firestore'
-import { firestore } from '@/config/firebaseBase'
+import { firestore } from '@/config/firebaseConfig'
 
 export class UserModel {
   private readonly COLLECTION_NAME = 'users'

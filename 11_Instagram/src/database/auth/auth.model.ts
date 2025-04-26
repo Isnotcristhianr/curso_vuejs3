@@ -6,7 +6,7 @@ import {
   type UserCredential,
 } from 'firebase/auth'
 import { AuthRepository } from '../../domain/repository/auth/auth.repository'
-import { auth, googleProvider } from '../../config/firebaseBase'
+import { auth, googleProvider } from '../../config/firebaseConfig'
 
 export class AuthModel implements AuthRepository {
   //patron repositorio
